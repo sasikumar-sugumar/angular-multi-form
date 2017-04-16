@@ -1,0 +1,43 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6 col-sm-6 col-xs-12">
+            <form method="post">
+                <div class="form-group ">
+                    <label class="control-label requiredField" for="emailAddress">
+       E-Mail
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+                    <input class="form-control" ng-model="vm.application.emailAddress"  id="emailAddress" name="emailAddress" placeholder="E-Mail" type="text" />
+                </div>
+                <div class="form-group ">
+                    <label class="control-label requiredField" for="phone">
+       Phone #
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+                    <input class="form-control" ng-model="vm.application.phone" id="phone" name="phone" placeholder="Phone" type="text" />
+                </div>
+                <div class="form-group ">
+                    <label class="control-label requiredField" for="address">
+       Address
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+                    <textarea class="form-control" ng-model="vm.application.address" cols="40" id="address" name="address" placeholder="Address" rows="10"></textarea>
+                </div>
+                <div class="form-group">
+                    <div>
+                        <a class="btn btn-default" ng-click="cancel()">Cancel</a>
+                        <button class="btn btn-primary" ng-click="previous()" wz-previous>Previous</button>
+                        <button type="submit" class="btn btn-primary submit-button" wz-next ng-disabled="vm.form.$invalid">Next</button>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

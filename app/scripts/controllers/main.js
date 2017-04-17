@@ -8,10 +8,12 @@
  * Controller of the angularMultiFormApp
  */
 angular.module('angularMultiFormApp')
-  .controller('MainCtrl', function () {
+  .controller('MainCtrl',['$scope','WizardHandler','LoanApplicationModel', function ($scope,WizardHandler,LoanApplicationModel) {
     this.awesomeThings = [
        'Karma'
     ];
+
+    var loanApplication = new LoanApplicationModel();
 
      var vm = this;
     // funcation assignment
@@ -27,13 +29,23 @@ angular.module('angularMultiFormApp')
    vm.indicatorsPosition = 'top';
 
     vm.application = {
-      awesome: true
+      awesome: true,
+      firstName: 'Sasikumar',
+      lastName : 'Sugumar'
     };
     vm.options = {
       formState: {
         awesomeIsForced: false
       }
     };
+
+        $scope.$watch(function() {
+        return WizardHandler.wizard();
+    }, function (wizard) {
+        if (wizard) {
+            wizard.goTo(1);
+        }
+    });
 
     vm.user = {};
 
@@ -138,4 +150,4 @@ angular.module('angularMultiFormApp')
       alert(JSON.stringify(vm.application), null, 2);
     }
   
-  });
+  }]);

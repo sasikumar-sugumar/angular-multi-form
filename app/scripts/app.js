@@ -16,7 +16,7 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'formly','formlyBootstrap','mgo-angular-wizard'
+    'formly','formlyBootstrap','mgo-angular-wizard','multiform.config','abstract.factory','LoanApplicationModel'
   ])
   .config(function ($routeProvider) {
     $routeProvider

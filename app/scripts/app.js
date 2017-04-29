@@ -10,13 +10,20 @@
  */
 angular
   .module('angularMultiFormApp', [
+    'ngMaterial',
+    'ngMessages',
     'ngAnimate',
     'ngCookies',
     'ngResource',
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'formly','formlyBootstrap','mgo-angular-wizard','multiform.config','abstract.factory','LoanApplicationModel'
+    'formly',
+    'formlyBootstrap',
+    'mgo-angular-wizard',
+    'multiform.config',
+    'abstract.factory',
+    'LoanApplicationModel'
   ])
   .config(function ($routeProvider) {
     $routeProvider

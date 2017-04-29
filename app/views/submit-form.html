@@ -1,25 +1,30 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-6 col-sm-6 col-xs-12">
-            <form method="post">
-                <div class="form-group ">
-                    <label class="control-label requiredField" for="comments">
-       Comments
-       <span class="asteriskField">
-        *
-       </span>
-      </label>
-                    <textarea class="form-control" ng-model="vm.application.comments" cols="40" id="comments" name="comments" placeholder="Comments" rows="5"></textarea>
-                </div>
-                <div class="form-group">
-                    <div>
-                        <a class="btn btn-default" ng-click="cancel()">Cancel</a>
-                        <button class="btn btn-primary" ng-click="previous()" wz-previous>Previous</button>
-                        <button type="submit" class="btn btn-primary submit-button" wz-next ng-disabled="vm.form.$invalid">Submit Application</button>
-
-                    </div>
-                </div>
-            </form>
+           
         </div>
     </div>
+   
+</div>
+
+<div  layout="column" ng-cloak class="md-inline-form">
+
+ 
+  <md-content layout-padding>
+    <div>
+        <div layout-gt-xs="row">
+         
+
+        <md-input-container class="md-block">
+          <label>Summary</label>
+          <textarea ng-model="user.biography" md-maxlength="150" rows="5" md-select-on-focus></textarea>
+        </md-input-container>
+
+    </div>
+      <div>
+        <md-button type="submit" wz-next ng-disabled="vm.form.$invalid">Save</md-button>
+        <md-button  ng-click="previous()" wz-previous>previous</md-button>
+      </div>
+  </md-content>
+
 </div>

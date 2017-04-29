@@ -187,13 +187,13 @@ gulp.task('html', function () {
 });
 
 gulp.task('images', function () {
-  return gulp.src(yeoman.app + '/images/**/*')
+  return gulp.src(yeoman.app + '/img/**/*')
     .pipe($.cache($.imagemin({
         optimizationLevel: 5,
         progressive: true,
         interlaced: true
     })))
-    .pipe(gulp.dest(yeoman.dist + '/images'));
+    .pipe(gulp.dest(yeoman.dist + '/img'));
 });
 
 gulp.task('copy:extras', function () {
